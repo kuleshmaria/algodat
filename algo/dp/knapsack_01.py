@@ -6,7 +6,7 @@ Complexity: O(nW)
 """
 
 def knapsack_01(ws, vs, W, n):
-    # dp[j][i] = maximum weight <= j using up to i items
+    # dp[i][j] = maximum weight <= j using up to i items
     dp = [[0 for _ in range(W+1)] for _ in range(n+1)]
     for i in range(1, n + 1):
         for j in range(1, W + 1):
